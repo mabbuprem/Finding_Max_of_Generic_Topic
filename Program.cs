@@ -7,7 +7,7 @@ namespace genericProblems
         {
             Console.WriteLine("Welcome to the generic problems");
             Program findMax = new Program();
-            Console.WriteLine($"Maximum number is {findMax.maxLength(569, 999, 478)}");
+            Console.WriteLine($"Maximum number is {findMax.maxLength(569, 478, 999)}");
 
 
         }
