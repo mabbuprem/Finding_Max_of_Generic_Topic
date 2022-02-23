@@ -7,7 +7,7 @@ namespace Finding_Max_Of_Generic_Topic
         {
             int[] arrayOfIntegers = { 4, 5, 6, 7, 8, 9 };
             float[] arrayOfFloats = { 4.6F, 7.8F, 8.8F, 9.5F };
-            string[] arrayOfStrings = { "g", "a", "n", };
+            string[] arrayOfStrings = { "p", "m", "p", };
 
             //Creating object and calling with IntMax class
             IntMax<int> maxInt = new IntMax<int>(arrayOfIntegers);
