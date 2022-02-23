@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Finding_Max_of_Generic_Topic
+namespace Finding_Max_Of_Generic_Topic
 {
     internal class IntMax
     {
@@ -18,5 +18,8 @@ namespace Finding_Max_of_Generic_Topic
             this.value2 = value2;
             this.value3 = value3;
         }
+
+
+
     }
 }
