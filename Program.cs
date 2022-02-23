@@ -3,27 +3,34 @@ namespace genericProblems
 {
     class Program
     {
-
         public static void Main()
         {
             Console.WriteLine("Welcome to the generic problems");
             Program findMax = new Program();
-            findMax.maxLength("Apple", "mango", "Banana");
+            Console.WriteLine($"Maximum number is {findMax.maxLength<int>(569, 478, 999)}");
+            Console.WriteLine($"Maximum float number is {findMax.maxLength<float>(9.9F, 5.6F, 4.7F)}");
+            Console.WriteLine($"Maximum string is {findMax.maxLength<string>("prem", "mery", "praveen")}");
+
+
         }
-        private void maxLength(string value1, string value2, string value3)
+
+        private T maxLength<T>(T value1, T value2, T value3)
+
         {
-            if (value1.CompareTo(value2) > 0 && value1.CompareTo(value3) > 0)
+            if (Comparer<T>.Default.Compare(value1, value2) > 0 && Comparer<T>.Default.Compare(value1, value3) > 0)
             {
-                Console.WriteLine(value1);
+                return value1;
             }
-            else if (value2.CompareTo(value3) > 0 && value2.CompareTo(value1) > 0)
+            else if (Comparer<T>.Default.Compare(value2, value1) > 0 && Comparer<T>.Default.Compare(value2, value3) > 0)
             {
-                Console.WriteLine(value2);
+                return value2;
             }
             else
             {
-                Console.WriteLine(value3);
+                return value3;
             }
         }
     }
+
+
 }
