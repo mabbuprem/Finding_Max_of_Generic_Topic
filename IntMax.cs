@@ -6,17 +6,28 @@ using System.Threading.Tasks;
 
 namespace Finding_Max_Of_Generic_Topic
 {
-    internal class StringMax
+    public class IntMax<T>
     {
-        public string value1;
-        public string value2;
-        public string value3;
+        public T[] valueofArray;
 
-        public StringMax(string value1, string value2, string value3)
+        public IntMax(T[] valueofArray)
         {
-            this.value1 = value1;
-            this.value2 = value2;
-            this.value3 = value3;
+            this.valueofArray = valueofArray;
+        }
+        public T[] Sort(T[] valuesofArray)
+        {
+            Array.Sort(valuesofArray);
+            return valuesofArray;
+        }
+        public T MaxOfArray(T[] valuesofArray)
+        {
+            var sorted_Values = Sort(valuesofArray);
+            return sorted_Values[^1];
+        }
+        public T MaxMethod()
+        {
+            var max = MaxOfArray(valueofArray);
+            return max;
         }
 
 
